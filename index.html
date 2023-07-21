@@ -6,12 +6,12 @@
     <title>Map And Set</title>
     <style>
         body{
-            background-color:skyblue;
+            background-color: skyblue;
         }
     </style>
-    
 </head>
 <body>
+    <h1>MAp and Sets</h1>
     <h3>Que.1: "Problem:"
         <pre>
             You are given a string (STR) of length N, consisting of only the lower case English alphabet.
@@ -65,30 +65,32 @@
             f=1
         </pre>
     </h3>
-    <pre><h4>
-        Ans:
+    <h3> Ans:
+  
+     
         let string = "abcadeecfb";
         let array = string.split('');
         let set = new Set(array);
         let newarray = Array.from(set);
         let output = newarray.map((element, index) => {
         let count = 0
-            for(let i=0; i<array.length; i++)
+        <pre>
+             for(let i=0; i < array.length; i++)
             { 
                 if(element == array[i])
                 {
                     count++;
                 }
             }
-            console.log(`${element} = ${count}`)
-          
+            console.log(`${element}  ${count}`)
+            
         }
-        ) ;      
-    </h4>
+        ) ;     
+    </pre>
     Reason: first we are converting string into object using split() method and in next line we are passing that object in Set() method
     and it will convert into set  that store unique value then we need to convert it into array by using Array() method and then loop 
     iterate in next line and check for each array element using anonymous function inside map and print element or charcter with  their count.   
-    </pre>
     
+</h3>
 </body>
 </html>
