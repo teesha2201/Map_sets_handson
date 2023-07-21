@@ -66,15 +66,14 @@
         </pre>
     </h3>
     <h3> Ans:
-  
-     
+    <pre>
         let string = "abcadeecfb";
         let array = string.split('');
         let set = new Set(array);
         let newarray = Array.from(set);
         let output = newarray.map((element, index) => {
         let count = 0
-        <pre>
+       
              for(let i=0; i < array.length; i++)
             { 
                 if(element == array[i])
