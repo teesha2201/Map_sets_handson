@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map And Set</title>
+</head>
+<body>
+    <h3>Que.1: "Problem:"
+        <pre>
+            You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+            Your task is to remove all the duplicate occurrences of characters in the string.
+
+            Input:
+            abcadeecfb
+
+            Output:
+            abcdef
+        </pre>
+    </h3>
+    <h4>Ans:
+        <pre>function removeduplicate(inputstr)
+            {
+                var chars = new Set(); 
+                var result = [];   //array
+            
+               for( const char of inputstr) 
+                if(!chars.has( char))
+                {
+                    chars.add(char);
+                    result.push(char);
+                }
+                return result.join('');
+            }
+            var STR = "abcadeecfb";
+            console.log(removeduplicate(STR))
+
+        Reason: Here, we are creating a function and passing string as agrs in function using var STR
+        and args take as parameter inside function using Set() we can find unique character and store in result i.e. array.
+        Using for of() check for each characters of string if condition check each character of inputstr is not available in
+        chars then add that character in set i.e. chars and push into array.and after completing for all input character convert
+        array into string using join() method and return the output i.e. abcdef 
+           
+        </pre>
+    </h4>
+    <h3>Que.2: "Problem:" 
+        <pre>
+            You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+            
+            Input:
+            abcadeecfb
+            
+            Output:
+            a=2
+            b=2
+            c=2
+            d=1
+            e=2
+            f=1
+        </pre>
+    </h3>
+    <pre><h4>
+        Ans:
+        let string = "abcadeecfb";
+        let array = string.split('');
+        let set = new Set(array);
+        let newarray = Array.from(set);
+        let output = newarray.map((element, index) => {
+        let count = 0
+            for(let i=0; i<array.length; i++)
+            { 
+                if(element == array[i])
+                {
+                    count++;
+                }
+            }
+            console.log(`${element} = ${count}`)
+          
+        }
+        ) ;      
+    </h4>
+    Reason: first we are converting string into object using split() method and in next line we are passing that object in Set() method
+    and it will convert into set  that store unique value then we need to convert it into array by using Array() method and then loop 
+    iterate in next line and check for each array element using anonymous function inside map and print element or charcter with  their count.   
+    </pre>
+    
+</body>
+</html>
